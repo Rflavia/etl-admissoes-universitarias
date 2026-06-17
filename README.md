@@ -1,54 +1,26 @@
 # ETL de Admissões Universitárias
 
-Sistema desenvolvido em Python para padronizar listas de aprovados de diferentes instituições de ensino superior.
+<h2>📌 Sobre o projeto</h2>
 
-O projeto realiza automaticamente:
+<p align="justify">
 
-- Leitura de planilhas Excel (.xlsx)
-- Detecção do modelo da instituição
-- Limpeza e padronização dos dados
-- Remoção de excedentes
-- Extração apenas dos candidatos aprovados
-- Exportação para uma nova planilha limpa
+Este projeto surgiu a partir de uma necessidade real observada durante minhas atividades profissionais: a padronização de listas de aprovados provenientes de diferentes instituições de ensino.
 
-Atualmente suporta:
+Cada planilha possuía estruturas, nomenclaturas e regras próprias, tornando o processo manual repetitivo e suscetível a erros. Para automatizar essa tarefa, desenvolvi uma aplicação em Python capaz de identificar automaticamente o modelo da instituição, extrair as informações relevantes, realizar a limpeza dos dados e gerar uma nova planilha padronizada.
 
-✅ UniRV  
-✅ UnB  
-✅ UNICEPLAC  
+O objetivo é tornar o processo mais rápido, confiável e escalável, facilitando a manipulação e organização de listas de admissões universitárias.
+
+</p>
 
 ---
 
-## 🛠 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Python 3
 - Pandas
 - OpenPyXL
 - Regex (Expressões Regulares)
 - Tkinter
-
----
-
-## Estrutura do projeto
-
-```text
-etl-admissoes-universitarias/
-
-├── limpador_planilhas.py
-
-├── modelos/
-│   ├── __init__.py
-│   ├── unb.py
-│   ├── unirv.py
-│   └── uniceplac.py
-
-├── exemplos/
-│   ├── unirv_original.png
-│   ├── unirv_limpo.png
-│   └── resumo_terminal.png
-
-└── README.md
-```
 
 ---
 
@@ -66,48 +38,41 @@ O sistema:
 6. Gera uma nova planilha organizada.
 
 ---
-
 # 📷 Exemplo 1 - Planilha original
-
-Arquivo recebido da UniRV contendo:
-
-- Inscrição
-- Classificação
-- Cotas
-- Situação
-- Dados misturados
 
 ![Original](exemplos/unirv_original.png)
 
 ---
 
-# 📷 Exemplo 2 - Resultado gerado
+# 📷 Exemplo 2 - Execução do programa
 
-Após o processamento, a planilha fica padronizada:
+O usuário seleciona a planilha `.xlsx`, o sistema detecta automaticamente o modelo e gera um novo arquivo limpo.
 
-- Nome
-- Curso
-- Banca
-- Situação
-
-![Limpo](exemplos/unirv_limpo.png)
+![Execução](exemplos/execucao_programa.png)
 
 ---
 
-# 📷 Exemplo 3 - Resumo do processamento
+# 📷 Exemplo 3 - Resultado gerado
 
-O sistema exibe no terminal:
+A planilha é exportada contendo apenas os campos relevantes.
 
-- Total de registros encontrados
+![Resultado](exemplos/unirv_limpo.png)
+
+---
+
+# 📷 Exemplo 4 - Resumo do processamento
+
+O terminal informa:
+
+- Total encontrado
 - Quantidade de aprovados
 - Quantidade de excedentes
 - Quantidade removida
 
 ![Resumo](exemplos/resumo_terminal.png)
-
 ---
 
-## 📈 Possíveis melhorias
+## Possíveis melhorias
 
 - Exportação para CSV
 - Interface gráfica mais completa
